@@ -1,0 +1,39 @@
+.faq {
+  margin-top: 149px;
+}
+
+.container {
+  width: 1106px;
+  margin: auto;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faqDescription {
+  width: 540px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.faqDescription > h2 {
+  font-size: 32px;
+  line-height: 52px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+
+.faqDescription > p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  opacity: 50%;
+}
