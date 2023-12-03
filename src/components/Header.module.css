@@ -1,0 +1,25 @@
+.header {
+  margin-top: 48px;
+}
+
+.container {
+  width: 1104px;
+  margin: auto;
+}
+
+.flow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 48px;
+}
+
+.nav > ul {
+  display: flex;
+  gap: 48px;
+  list-style-type: none;
+}

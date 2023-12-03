@@ -1,0 +1,97 @@
+.download {
+  margin-top: 238px;
+}
+
+.container {
+  width: 911px;
+  margin: auto;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.downloadDescription {
+  width: 541px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.downloadDescription > h2 {
+  font-size: 32px;
+  line-height: 52px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+
+.downloadDescription > p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  opacity: 50%;
+}
+
+.cardContainer {
+  width: 100%;
+  height: 451px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 49px 24px 24px 24px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10 20 -5 rgba(73, 93, 207, 0.2);
+}
+
+.card:nth-child(1) {
+  align-self: flex-start;
+}
+.card:nth-child(2) {
+  align-self: center;
+}
+.card:nth-child(3) {
+  align-self: flex-end;
+}
+
+.card > img:nth-child(1) {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 32px;
+}
+
+.card > h3 {
+  font-size: 20px;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.card > p {
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 400;
+  opacity: 50%;
+  margin-bottom: 32px;
+}
+
+.dots {
+  margin-bottom: 24px;
+}
+
+.card > button {
+  width: 100%;
+}
