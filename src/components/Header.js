@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-// import Logo from "../assets/logo-bookmark.svg";
+import RedButton from "./UI/RedButton";
 
 import { ReactComponent as Logo } from "../assets/logo-bookmark.svg";
 
@@ -17,7 +17,19 @@ const Header = () => {
             <li>Pricing</li>
             <li>Contact</li>
           </ul>
-          <button>Login</button>
+          <RedButton
+            style={{
+              paddingBlock: "12px 11px",
+              paddingInline: "33px 32px",
+              fontSize: "13px",
+              letterSpacing: "1.5px",
+              lineHeight: "17px",
+              fontWeight: "500",
+              textTransform: "Uppercase",
+            }}
+          >
+            Login
+          </RedButton>
         </nav>
       </div>
     </header>

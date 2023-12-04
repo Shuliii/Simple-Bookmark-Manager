@@ -7,6 +7,12 @@
   margin: auto;
 }
 
+@media (max-width: 1440px) {
+  .container {
+    width: 768px;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: 540px 1fr;

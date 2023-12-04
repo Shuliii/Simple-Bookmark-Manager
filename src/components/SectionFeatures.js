@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+import BlueButton from "./UI/BlueButton";
 import styles from "./SectionFeatures.module.css";
 // import { ReactComponent as Tab1 } from "../assets/illustration-features-tab-1.svg";
 import Tab1 from "../assets/illustration-features-tab-1.svg";
@@ -15,59 +17,146 @@ const SectionFeatures = () => {
     content === "Easy Sharing" && setState(2);
   };
 
+  const variants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: { duration: 1 },
+    },
+  };
+
+  const slideLeft = {
+    initial: {
+      x: 75,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
   let content;
 
   if (state === 0) {
     content = (
-      <div className={styles.featureTab}>
+      <motion.div
+        key={Math.random()}
+        variants={variants}
+        initial="initial"
+        animate="animate"
+        className={styles.featureTab}
+      >
         <div className={styles.featurePicture}>
           <img src={Tab1} alt="" />
           <div className={styles.capsuleBlue}></div>
         </div>
-        <div className={styles.featureTabDescription}>
+        <motion.div
+          variants={slideLeft}
+          initial="initial"
+          animate="animate"
+          className={styles.featureTabDescription}
+        >
           <h2>Bookmark in one click</h2>
           <p>
             Organize your bookmarks however you like. Our simple drag-and-drop
             interface gives you complete control over how you manage your
             favourite sites.
           </p>
-          <button>More Info</button>
-        </div>
-      </div>
+          <BlueButton
+            style={{
+              paddingBlock: "10px",
+              paddingInline: "24px",
+              fontSize: "14px",
+              letterSpacing: "0.25px",
+              lineHeight: "28px",
+              fontWeight: "500",
+            }}
+          >
+            More Info
+          </BlueButton>
+        </motion.div>
+      </motion.div>
     );
   } else if (state === 1) {
     content = (
-      <div className={styles.featureTab}>
+      <motion.div
+        key={Math.random()}
+        variants={variants}
+        initial="initial"
+        animate="animate"
+        className={styles.featureTab}
+      >
         <div className={styles.featurePicture} style={{ paddingLeft: 75 }}>
           <img src={Tab2} alt="" />
           <div className={styles.capsuleBlue}></div>
         </div>
-        <div className={styles.featureTabDescription}>
+        <motion.div
+          variants={slideLeft}
+          initial="initial"
+          animate="animate"
+          className={styles.featureTabDescription}
+        >
           <h2>Intelligent Search</h2>
           <p>
             Our powerful serch feature will help you find saved sites in no time
             at all. No need to trawl through all of your bookmarks.
           </p>
-          <button>More Info</button>
-        </div>
-      </div>
+          <BlueButton
+            style={{
+              paddingBlock: "10px",
+              paddingInline: "24px",
+              fontSize: "14px",
+              letterSpacing: "0.25px",
+              lineHeight: "28px",
+              fontWeight: "500",
+            }}
+          >
+            More Info
+          </BlueButton>
+        </motion.div>
+      </motion.div>
     );
   } else {
     content = (
-      <div className={styles.featureTab}>
+      <motion.div
+        key={Math.random()}
+        variants={variants}
+        initial="initial"
+        animate="animate"
+        className={styles.featureTab}
+      >
         <div className={styles.featurePicture} style={{ paddingLeft: 75 }}>
           <img src={Tab3} alt="" />
           <div className={styles.capsuleBlue}></div>
         </div>
-        <div className={styles.featureTabDescription}>
+        <motion.div
+          variants={slideLeft}
+          initial="initial"
+          animate="animate"
+          className={styles.featureTabDescription}
+        >
           <h2>Share your bookmarks</h2>
           <p>
             Easily share your bookmarks and collections with others. Create a
             shareable link that you can send at the click of a button.
           </p>
-          <button>More Info</button>
-        </div>
-      </div>
+          <BlueButton
+            style={{
+              paddingBlock: "10px",
+              paddingInline: "24px",
+              fontSize: "14px",
+              letterSpacing: "0.25px",
+              lineHeight: "28px",
+              fontWeight: "500",
+            }}
+          >
+            More Info
+          </BlueButton>
+        </motion.div>
+      </motion.div>
     );
   }
 

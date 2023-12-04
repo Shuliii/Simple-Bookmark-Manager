@@ -1,6 +1,8 @@
 import styles from "./SectionHero.module.css";
+import BlueButton from "./UI/BlueButton";
+import WhiteButton from "./UI/WhiteButton";
 
-import { ReactComponent as Hero } from "../assets/illustration-hero.svg";
+import Hero from "../assets/illustration-hero.svg";
 
 const SectionHero = () => {
   return (
@@ -14,12 +16,34 @@ const SectionHero = () => {
             free.
           </p>
           <div className={styles.buttonContainer}>
-            <button>Get it on Chrome</button>
-            <button>Get it on Firefox</button>
+            <BlueButton
+              style={{
+                paddingBlock: "10px",
+                paddingInline: "24px",
+                fontSize: "14px",
+                letterSpacing: "0.25px",
+                lineHeight: "28px",
+                fontWeight: "500",
+              }}
+            >
+              Get it on Chrome
+            </BlueButton>
+            <WhiteButton
+              style={{
+                paddingBlock: "10px",
+                paddingInline: "24px 25px",
+                fontSize: "14px",
+                letterSpacing: "0.25px",
+                lineHeight: "28px",
+                fontWeight: "500",
+              }}
+            >
+              Get it on Firefox
+            </WhiteButton>
           </div>
         </div>
         <div className={styles.heroPicture}>
-          <Hero className={styles.img} />
+          <img src={Hero} alt="" />
           <div className={styles.capsuleBlue}></div>
         </div>
       </div>

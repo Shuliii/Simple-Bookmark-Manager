@@ -7,6 +7,12 @@
   margin: auto;
 }
 
+@media (max-width: 1440px) {
+  .container {
+    width: 768px;
+  }
+}
+
 .flow {
   display: flex;
   flex-direction: column;
@@ -36,4 +42,71 @@
   line-height: 28px;
   font-weight: 400;
   opacity: 50%;
+}
+
+.faqQuestions {
+  width: 540px;
+  margin-inline: auto;
+  margin-top: 56px;
+  margin-bottom: 54px;
+}
+
+.faqQuestions > ul {
+  list-style-type: none;
+  width: 100%;
+  position: relative;
+}
+
+.faqQuestions > ul::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: #979797;
+  opacity: 14.77%;
+}
+
+.faqQuestions > ul > li {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-block: 20px 13px;
+  color: #242a45;
+}
+
+.faqQuestions > ul > li:hover {
+  cursor: pointer;
+}
+
+.faqQuestions > ul > li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #979797;
+  opacity: 14.77%;
+}
+
+.faqQuestions > ul > li > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.faqQuestions > ul > li > div:nth-child(1):hover {
+  color: #fa5959;
+}
+
+.faqQuestions > ul > li > div:nth-child(2) {
+  font-size: 16px;
+  line-height: 36px;
+  padding-bottom: 16px;
 }
