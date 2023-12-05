@@ -7,6 +7,12 @@
   margin: auto;
 }
 
+@media (max-width: 1440) {
+  .container {
+    width: 768px;
+  }
+}
+
 .flow {
   display: flex;
   flex-direction: column;

@@ -114,6 +114,17 @@
   width: 445px;
 }
 
+@media (max-width: 1440px) {
+  .featureTab {
+    display: flex;
+    gap: 26px;
+  }
+  .featureTabDescription {
+    margin-top: 57px;
+    width: 311px;
+  }
+}
+
 .featureTabDescription > p {
   margin-block: 16px 32px;
 }
