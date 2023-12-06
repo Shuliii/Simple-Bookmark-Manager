@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+
 import BlueButton from "./UI/BlueButton";
 import styles from "./SectionFeatures.module.css";
 // import { ReactComponent as Tab1 } from "../assets/illustration-features-tab-1.svg";

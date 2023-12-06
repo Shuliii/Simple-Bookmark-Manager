@@ -12,12 +12,24 @@
   grid-template-columns: 540px 1fr;
   gap: 26px;
 }
+
 @media (max-width: 1440px) {
   .container {
     width: 768px;
   }
   .grid {
     grid-template-columns: 311px 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 311px;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column-reverse;
+    place-items: center;
   }
 }
 
@@ -50,12 +62,6 @@
   position: relative;
 }
 
-.img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .capsuleBlue {
   position: absolute;
   top: 142.5px;
@@ -65,4 +71,40 @@
   background: #5267df;
   border-radius: 316.5px;
   z-index: -10;
+}
+
+@media (max-width: 1024px) {
+  .heroDescription {
+    margin-top: 80px;
+    text-align: center;
+  }
+  .heroDescription > h1 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 500;
+    letter-spacing: -0.09px;
+  }
+
+  .heroDescription > p {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .heroDescription > .buttonContainer {
+    width: 100%;
+    gap: 14px;
+  }
+
+  .heroPicture > img {
+    width: 313px;
+  }
+
+  .capsuleBlue {
+    height: 203px;
+    width: 577px;
+    top: 52px;
+    left: 39px;
+  }
 }

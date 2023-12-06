@@ -13,6 +13,16 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .features {
+    margin-top: 140px;
+  }
+
+  .container {
+    width: 311px;
+  }
+}
+
 .flow {
   display: flex;
   flex-direction: column;
@@ -114,6 +124,10 @@
   width: 445px;
 }
 
+.featureTabDescription > p {
+  margin-block: 16px 32px;
+}
+
 @media (max-width: 1440px) {
   .featureTab {
     display: flex;
@@ -123,8 +137,4 @@
     margin-top: 57px;
     width: 311px;
   }
-}
-
-.featureTabDescription > p {
-  margin-block: 16px 32px;
 }

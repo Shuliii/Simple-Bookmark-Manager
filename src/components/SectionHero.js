@@ -1,3 +1,4 @@
+import useWindows from "../hooks/use-windows";
 import styles from "./SectionHero.module.css";
 import BlueButton from "./UI/BlueButton";
 import WhiteButton from "./UI/WhiteButton";
@@ -5,6 +6,7 @@ import WhiteButton from "./UI/WhiteButton";
 import Hero from "../assets/illustration-hero.svg";
 
 const SectionHero = () => {
+  const { width } = useWindows();
   return (
     <section className={styles.hero}>
       <div className={`${styles.container} ${styles.grid}`}>
@@ -17,26 +19,48 @@ const SectionHero = () => {
           </p>
           <div className={styles.buttonContainer}>
             <BlueButton
-              style={{
-                paddingBlock: "10px",
-                paddingInline: "24px",
-                fontSize: "14px",
-                letterSpacing: "0.25px",
-                lineHeight: "28px",
-                fontWeight: "500",
-              }}
+              style={
+                width > 1024
+                  ? {
+                      paddingBlock: "10px",
+                      paddingInline: "24px",
+                      fontSize: "14px",
+                      letterSpacing: "0.25px",
+                      lineHeight: "28px",
+                      fontWeight: "500",
+                    }
+                  : {
+                      paddingBlock: "10px",
+                      fontSize: "14px",
+                      letterSpacing: "0.25px",
+                      lineHeight: "28px",
+                      fontWeight: "500",
+                      width: "50%",
+                    }
+              }
             >
               Get it on Chrome
             </BlueButton>
             <WhiteButton
-              style={{
-                paddingBlock: "10px",
-                paddingInline: "24px 25px",
-                fontSize: "14px",
-                letterSpacing: "0.25px",
-                lineHeight: "28px",
-                fontWeight: "500",
-              }}
+              style={
+                width > 1024
+                  ? {
+                      paddingBlock: "10px",
+                      paddingInline: "24px 25px",
+                      fontSize: "14px",
+                      letterSpacing: "0.25px",
+                      lineHeight: "28px",
+                      fontWeight: "500",
+                    }
+                  : {
+                      paddingBlock: "10px",
+                      fontSize: "14px",
+                      letterSpacing: "0.25px",
+                      lineHeight: "28px",
+                      fontWeight: "500",
+                      width: "50%",
+                    }
+              }
             >
               Get it on Firefox
             </WhiteButton>
